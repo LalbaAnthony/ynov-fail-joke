@@ -23,7 +23,7 @@ jobs:
           PUNCHLINE=$(echo $RESPONSE | jq -r '.punchline')
           BRANCH_NAME=${GITHUB_REF##*/}
 
-          MESSAGE="Here's a joke for you:\n**$SETUP**\n*$PUNCHLINE* \n https://media1.tenor.com/m/rK8dGgtR9qoAAAAd/jadore-rire.gif"
+          MESSAGE="Here's a joke for you:\n**$SETUP**\n*$PUNCHLINE* \nhttps://media1.tenor.com/m/rK8dGgtR9qoAAAAd/jadore-rire.gif"
 
           curl -X POST -H "Content-Type: application/json" \
           -d "{\"content\": \"$MESSAGE\"}" \
